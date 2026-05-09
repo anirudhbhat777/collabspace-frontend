@@ -11,8 +11,7 @@ import { useRouter } from "next/router";
 
 import DashboardLayout from "../components/DashboardLayout";
 
-import { API_URL } from "../lib/api";
-
+import { API_URL} from "../lib/api";
 export default function Dashboard() {
   const router = useRouter();
 

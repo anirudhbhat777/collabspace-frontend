@@ -6,6 +6,7 @@ import {
 } from "react";
 
 import { useRouter } from "next/router";
+import { API_URL } from "../lib/api";
 
 export default function SignupPage() {
   const router = useRouter();
@@ -26,8 +27,9 @@ export default function SignupPage() {
   }, []);
 
   const handleSignup = async () => {
+    console.log("API URL =", API_URL);
     const res = await fetch(
-      "http://localhost:3001/auth/signup",
+      `${API_URL}/auth/signup`,
       {
         method: "POST",
 
